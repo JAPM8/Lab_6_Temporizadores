@@ -21,7 +21,7 @@ PROCESSOR 16F887
 ; CONFIG1
 CONFIG  FOSC = INTRC_NOCLKOUT ; Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
 CONFIG  WDTE = OFF            ; Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
-CONFIG  PWRTE = ON            ; Power-up Timer Enable bit (PWRT enabled)
+CONFIG  PWRTE = OFF            ; Power-up Timer Enable bit (PWRT enabled)
 CONFIG  MCLRE = OFF           ; RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
 CONFIG  CP = OFF              ; Code Protection bit (Program memory code protection is disabled)
 CONFIG  CPD = OFF             ; Data Code Protection bit (Data memory code protection is disabled)
@@ -29,7 +29,7 @@ CONFIG  CPD = OFF             ; Data Code Protection bit (Data memory code prote
 CONFIG  BOREN = OFF           ; Brown Out Reset Selection bits (BOR disabled)
 CONFIG  IESO = OFF            ; Internal External Switchover bit (Internal/External Switchover mode is disabled)
 CONFIG  FCMEN = OFF           ; Fail-Safe Clock Monitor Enabled bit (Fail-Safe Clock Monitor is disabled)
-CONFIG  LVP = ON              ; Low Voltage Programming Enable bit (RB3/PGM pin has PGM function, low voltage programming enabled)
+CONFIG  LVP = OFF             ; Low Voltage Programming Enable bit (RB3/PGM pin has PGM function, low voltage programming enabled)
 
 ; CONFIG2
 CONFIG  BOR4V = BOR40V        ; Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
@@ -41,8 +41,10 @@ PSECT udata_bank0	      ; Common memory
     CONT_MEDS:	 DS 1	      ; 1 Byte (Contador de 500 ms con TMR1)
     SEGS:	 DS 1	      ; 1 Byte (Contador de segundos)
     BANDERAS:	 DS 1	      ; 1 Byte (Banderas selector de display)
+    UNIDADES:	 DS 1	      ; 1 Byte variable que almacena las unidades
+    DECENAS:	 DS 1	      ; 1 Byte variable que almacena las decenas del contador
+    DIV:	 DS 1	      ; 1 Byte variable que almacena valores de división
     DISPLAY:	 DS 2	      ; 2 Byte (Almacena en cada Byte la config de cada display)
-    NIBBLES:	 DS 2	      ; 2 Byte (Almacena en cada Byte el valor del contador de cada display 
     
 RESET_TMR0 MACRO
     BANKSEL TMR0	        ; Cambiamos al banco 1
@@ -119,11 +121,16 @@ MAIN:
     CALL    ENABLE_INTS
 
     BANKSEL PORTA
+    CLRF	DECENAS
+    CLRF	UNIDADES
+    CLRF	SEGS
+    CLRF	DIV
     
 LOOP:
-    CALL SEPARACION_NIBBLES   ; Subrutina para obtención del valor de cada contador
-    CALL CONFIG_DISPLAY	      ; Subrutina para traducción de valores a 7 seg
-    
+    CALL	CONFIG_DISPLAY	      ; Subrutina para traducción de valores a 7 seg   
+    CALL	OBTENER_DECENAS	      ; Subrutina para obtener decenas de contador
+    CALL	OBTENER_UNIDADES      ; Subrutina para obtener unidades de contador
+        
     GOTO LOOP
 
 CONFIG_PINES:
@@ -172,26 +179,42 @@ DISP_PRINC:
         
     RETURN
 
-SEPARACION_NIBBLES:           ; Subrutina para obtención del valor de cada contador
-    ; Nibble bajo
-    MOVLW   0X0F	      ; Literal a w
-    ANDWF   SEGS, W	      ; AND para pasar 4 bits menos significativos
-    MOVWF   NIBBLES	      ; Pasa un nibble al primer byte
     
-    ;Nibble alto:
-    MOVLW   0XF0	      ; Literal a w
-    ANDWF   SEGS, W	      ; AND para pasar 4 bits más significativos
-    MOVWF   NIBBLES+1	      ; Pasa un nibble al segundo byte
-    SWAPF   NIBBLES+1, F      ; Swap del nibble para que los 4 menos significativos los tenga con VAR
+OBTENER_DECENAS:
+    CLRF	DECENAS
+    CLRF	UNIDADES
     
+    MOVF	SEGS,W	     ; Pasamos contador a variable de división
+    MOVWF       DIV
+    MOVLW	10	     ; Restamos 10 para obtener cantidad de decenas
+    SUBWF	DIV, F	     
+    INCF	DECENAS
+    BTFSC	STATUS, 0    ; Se verifica si ocurrió BORROW (resultado aún mayor que 10)
+    GOTO	$-4	     ; De ser así se continua restando
+    DECF	DECENAS	     ; Se elimina la última añadición pues ya nos pasamos
+    MOVLW	10	     ; Se regresa el valor a sus unidades antes de la resta 
+    ADDWF	DIV, F
+
+    RETURN  
+
+OBTENER_UNIDADES:
+    MOVLW	1		    ; Restamos 1 para obtener cantidad de unidades
+    SUBWF	DIV, F	            
+    INCF	UNIDADES
+    BTFSC	STATUS, 0	    ; Se verifica si ocurrió BORROW (resultado aún mayor que 1)
+    GOTO	$-4		    ; De ser así se continua restando
+    DECF	UNIDADES
+    MOVLW	1		    ; Se elimina la última añadición pues ya nos pasamos
+    ADDWF	DIV, F		    ; Se regresa el valor a 0 en este caso
+
     RETURN
-    
+	
 CONFIG_DISPLAY:               ; Subrutina para traducción de valores a 7 seg
-    MOVF    NIBBLES, W	      ; nibble bajo a W
+    MOVF    UNIDADES, W	      ; Unidades
     CALL    TABLA	      ; Se pasa el valor a la tabla de 7 segmentos.
     MOVWF   DISPLAY           ; La configuración de pines va a la variable display_var
     
-    MOVF    NIBBLES+1, W      ; Nibble alto a W
+    MOVF    DECENAS, W        ; Decenas
     CALL    TABLA	      ; Se pasa el valor a la tabla de 7 segmentos.
     MOVWF   DISPLAY+1         ; La configuración de pines va al segundo byte de la variable display_var
     
@@ -205,22 +228,27 @@ CONT_TMR1: ;Prelab
     CLRF    CONT_MEDS
     INCF    SEGS	      ; Incrementamos segundos
     
+    MOVF    SEGS, W	      ; Se limita el contador a 99 con una resta
+    SUBLW   100
+    BTFSC   ZERO	      ; Se verifica bandera de Zero para verificar valor
+    CLRF    SEGS
+    
     RETURN  
     
 CONT_TMR2: ;Lab
-    BCF	    TMR2IF	    ; Limpiamos bandera de interrupcion de TMR2
-    INCF    CONT_LED	    ; Incrementamos contador led intermitente +50ms
-    BTFSC   CONT_LED,3	    ; Verificamos si ya se contaron 10 veces 50ms (500 ms)
+    BCF	    TMR2IF	      ; Limpiamos bandera de interrupcion de TMR2
+    INCF    CONT_LED	      ; Incrementamos contador led intermitente +50ms
+    BTFSC   CONT_LED,3	      ; Verificamos si ya se contaron 10 veces 50ms (500 ms)
     BTFSS   CONT_LED,1
     RETURN
     CLRF    CONT_LED
-    INCF    PORTA	    ; Incremento en PORTA (Led intermitente)
+    INCF    PORTA	      ; Incremento en PORTA (Led intermitente)
     
     RETURN
     
 CONFIG_RELOJ:
-    BANKSEL OSCCON	    ; Cambiamos de banco
-    BSF	    OSCCON, 0	    ; Seteamos para utilizar reloj interno (SCS=1)
+    BANKSEL OSCCON	      ; Cambiamos de banco
+    BSF	    OSCCON, 0	      ; Seteamos para utilizar reloj interno (SCS=1)
     
     ;Se modifican los bits 4 al 6 de OSCCON al valor de 110b para frecuencia de 4 MHz (IRCF)
     BSF	    OSCCON, 6

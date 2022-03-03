@@ -14,7 +14,7 @@
 $build/default/production/main_COMP.o
 resVect CODE 0 0 0 12 2 1
 code CODE 0 0 0 214 2 1
-udata_bank0 BANK0 1 20 20 8 1 1
+udata_bank0 BANK0 1 20 20 9 1 1
 udata_shr COMMON 1 70 70 2 1 1
 config CONFIG 4 2007 2007 2 2 1
 # %UNUSED Section
@@ -23,11 +23,11 @@ config CONFIG 4 2007 2007 2 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 28-6F 1
+RAM 29-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 28-6F 1
+BANK0 29-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
@@ -53,174 +53,197 @@ STRING 214-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $build/default/production/main_COMP.o
-0 resVect CODE >72:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-0 resVect CODE >76:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-2 resVect CODE >77:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-3 resVect CODE >80:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-4 resVect CODE >82:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-5 resVect CODE >83:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-6 resVect CODE >84:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-7 resVect CODE >87:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-8 resVect CODE >88:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-9 resVect CODE >90:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-A resVect CODE >91:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-B resVect CODE >93:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-C resVect CODE >94:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-D resVect CODE >97:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-E resVect CODE >98:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-F resVect CODE >99:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-10 resVect CODE >100:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-11 resVect CODE >102:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-0 code CODE >106:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-100 code CODE >109:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-101 code CODE >111:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-102 code CODE >113:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-103 code CODE >115:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-104 code CODE >117:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-105 code CODE >119:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-106 code CODE >121:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+0 resVect CODE >74:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+0 resVect CODE >78:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+2 resVect CODE >79:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+3 resVect CODE >82:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+4 resVect CODE >84:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+5 resVect CODE >85:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+6 resVect CODE >86:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+7 resVect CODE >89:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+8 resVect CODE >90:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+9 resVect CODE >92:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+A resVect CODE >93:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+B resVect CODE >95:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+C resVect CODE >96:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+D resVect CODE >99:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+E resVect CODE >100:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+F resVect CODE >101:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+10 resVect CODE >102:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+11 resVect CODE >104:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+0 code CODE >108:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+100 code CODE >111:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+101 code CODE >113:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+102 code CODE >115:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+103 code CODE >117:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+104 code CODE >119:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+105 code CODE >121:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+106 code CODE >123:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 108 code CODE >124:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 109 code CODE >125:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-10A code CODE >127:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-10B code CODE >130:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+10A code CODE >126:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+10B code CODE >127:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+10C code CODE >130:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 10D code CODE >131:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 10E code CODE >132:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 10F code CODE >134:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-111 code CODE >135:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-112 code CODE >136:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-113 code CODE >137:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-114 code CODE >139:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-116 code CODE >140:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-117 code CODE >141:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-118 code CODE >142:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-119 code CODE >144:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-11A code CODE >147:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-11C code CODE >147:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-11D code CODE >147:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-11E code CODE >147:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-11F code CODE >148:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-120 code CODE >150:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-121 code CODE >153:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+110 code CODE >137:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+112 code CODE >138:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+113 code CODE >139:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+114 code CODE >141:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+116 code CODE >142:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+117 code CODE >143:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+118 code CODE >144:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+119 code CODE >146:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+11B code CODE >147:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+11C code CODE >148:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+11D code CODE >149:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+11E code CODE >151:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+11F code CODE >154:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+121 code CODE >154:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 122 code CODE >154:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-123 code CODE >155:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-124 code CODE >158:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-125 code CODE >159:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+123 code CODE >154:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+124 code CODE >155:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+125 code CODE >157:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 126 code CODE >160:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-127 code CODE >162:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-128 code CODE >164:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-129 code CODE >167:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-12A code CODE >168:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-12B code CODE >169:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-12C code CODE >171:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-12D code CODE >173:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-12E code CODE >177:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-12F code CODE >178:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-130 code CODE >179:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-131 code CODE >182:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-132 code CODE >183:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+127 code CODE >161:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+128 code CODE >162:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+129 code CODE >165:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+12A code CODE >166:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+12B code CODE >167:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+12C code CODE >169:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+12D code CODE >171:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+12E code CODE >174:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+12F code CODE >175:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+130 code CODE >176:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+131 code CODE >178:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+132 code CODE >180:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 133 code CODE >184:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 134 code CODE >185:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 135 code CODE >187:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-136 code CODE >190:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-137 code CODE >191:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-138 code CODE >192:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-139 code CODE >194:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-13A code CODE >195:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-13B code CODE >196:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-13C code CODE >198:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-13D code CODE >201:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-13F code CODE >201:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+136 code CODE >188:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+137 code CODE >189:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+138 code CODE >190:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+139 code CODE >191:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+13A code CODE >192:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+13B code CODE >193:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+13C code CODE >194:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+13D code CODE >195:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+13E code CODE >196:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+13F code CODE >198:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 140 code CODE >201:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-141 code CODE >201:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-142 code CODE >201:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-143 code CODE >201:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-144 code CODE >202:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-145 code CODE >203:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-146 code CODE >204:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-147 code CODE >205:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-148 code CODE >206:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-149 code CODE >208:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-14A code CODE >211:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-14B code CODE >212:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-14C code CODE >213:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-14D code CODE >214:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-14E code CODE >215:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-14F code CODE >216:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-150 code CODE >217:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-151 code CODE >219:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-152 code CODE >222:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-154 code CODE >223:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-155 code CODE >226:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-156 code CODE >227:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-157 code CODE >228:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-158 code CODE >230:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-159 code CODE >233:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-15B code CODE >234:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-15C code CODE >235:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-15D code CODE >237:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-15E code CODE >238:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-15F code CODE >239:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-160 code CODE >241:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-162 code CODE >241:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+141 code CODE >202:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+142 code CODE >203:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+143 code CODE >204:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+144 code CODE >205:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+145 code CODE >206:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+146 code CODE >207:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+147 code CODE >208:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+148 code CODE >210:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+149 code CODE >213:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+14A code CODE >214:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+14B code CODE >215:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+14C code CODE >217:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+14D code CODE >218:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+14E code CODE >219:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+14F code CODE >221:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+150 code CODE >224:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+152 code CODE >224:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+153 code CODE >224:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+154 code CODE >224:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+155 code CODE >224:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+156 code CODE >224:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+157 code CODE >225:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+158 code CODE >226:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+159 code CODE >227:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+15A code CODE >228:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+15B code CODE >229:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+15C code CODE >231:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+15D code CODE >232:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+15E code CODE >233:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+15F code CODE >234:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+160 code CODE >236:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+161 code CODE >239:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+162 code CODE >240:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 163 code CODE >241:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-164 code CODE >241:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+164 code CODE >242:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 165 code CODE >243:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-166 code CODE >246:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+166 code CODE >244:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+167 code CODE >245:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 168 code CODE >247:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-169 code CODE >248:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-16A code CODE >250:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+169 code CODE >250:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 16B code CODE >251:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-16C code CODE >253:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-16D code CODE >254:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+16C code CODE >254:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+16D code CODE >255:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 16E code CODE >256:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-170 code CODE >256:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-171 code CODE >256:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-172 code CODE >256:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-173 code CODE >256:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-174 code CODE >256:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-175 code CODE >258:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-176 code CODE >261:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-178 code CODE >262:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-179 code CODE >263:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-17A code CODE >265:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-17C code CODE >266:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-17D code CODE >267:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-17E code CODE >269:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-17F code CODE >270:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-180 code CODE >271:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-181 code CODE >272:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-182 code CODE >274:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-183 code CODE >276:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-184 code CODE >279:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-186 code CODE >280:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-187 code CODE >282:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-189 code CODE >283:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+16F code CODE >258:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+170 code CODE >261:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+172 code CODE >262:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+173 code CODE >263:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+174 code CODE >265:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+175 code CODE >266:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+176 code CODE >267:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+177 code CODE >269:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+179 code CODE >269:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+17A code CODE >269:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+17B code CODE >269:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+17C code CODE >271:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+17D code CODE >274:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+17F code CODE >275:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+180 code CODE >276:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+181 code CODE >278:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+182 code CODE >279:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+183 code CODE >281:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+184 code CODE >282:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+185 code CODE >284:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+187 code CODE >284:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+188 code CODE >284:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+189 code CODE >284:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 18A code CODE >284:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-18B code CODE >285:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+18B code CODE >284:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 18C code CODE >286:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-18D code CODE >287:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-18E code CODE >289:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-18F code CODE >291:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-200 code CODE >293:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-201 code CODE >294:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-202 code CODE >295:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-203 code CODE >296:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-204 code CODE >297:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-205 code CODE >298:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-206 code CODE >299:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-207 code CODE >300:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-208 code CODE >301:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-209 code CODE >302:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-20A code CODE >303:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-20B code CODE >304:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-20C code CODE >305:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-20D code CODE >306:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-20E code CODE >307:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-20F code CODE >308:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-210 code CODE >309:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-211 code CODE >310:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-212 code CODE >311:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
-213 code CODE >312:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+18D code CODE >289:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+18F code CODE >290:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+190 code CODE >291:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+191 code CODE >293:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+193 code CODE >294:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+194 code CODE >295:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+195 code CODE >297:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+196 code CODE >298:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+197 code CODE >299:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+198 code CODE >300:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+199 code CODE >302:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+19A code CODE >304:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+19B code CODE >307:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+19D code CODE >308:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+19E code CODE >310:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+1A0 code CODE >311:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+1A1 code CODE >312:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+1A2 code CODE >313:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+1A3 code CODE >314:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+1A4 code CODE >315:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+1A5 code CODE >317:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+1A6 code CODE >319:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+200 code CODE >321:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+201 code CODE >322:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+202 code CODE >323:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+203 code CODE >324:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+204 code CODE >325:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+205 code CODE >326:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+206 code CODE >327:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+207 code CODE >328:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+208 code CODE >329:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+209 code CODE >330:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+20A code CODE >331:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+20B code CODE >332:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+20C code CODE >333:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+20D code CODE >334:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+20E code CODE >335:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+20F code CODE >336:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+210 code CODE >337:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+211 code CODE >338:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+212 code CODE >339:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
+213 code CODE >340:C:\Users\javyp\OneDrive\Documentos\UNIVERSIDAD\Progra_MICROS\Lab_6_Temporizador.X\main_COMP.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -290,7 +313,7 @@ __Ludata_shr 0 0 ABS 0 udata_shr -
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-udata_bank0 1 20 20 8 1
+udata_bank0 1 20 20 9 1
 udata_shr 1 70 70 2 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

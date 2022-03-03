@@ -10,13 +10,13 @@
  Intel Hex-file ranges:
   0h - 5h		(dist/default/production\Lab_6_Temporizador.X.production.hex)
   8h - 23h		(dist/default/production\Lab_6_Temporizador.X.production.hex)
-  200h - 31Dh		(dist/default/production\Lab_6_Temporizador.X.production.hex)
+  200h - 34Bh		(dist/default/production\Lab_6_Temporizador.X.production.hex)
   400h - 427h		(dist/default/production\Lab_6_Temporizador.X.production.hex)
   400Eh - 4011h		(dist/default/production\Lab_6_Temporizador.X.production.hex)
  Unused ranges:
   6h - 7h
   24h - 1FFh
-  31Eh - 3FFh
+  34Ch - 3FFh
   428h - 400Dh
 
 ### Hex Memory Map ###
@@ -47,7 +47,10 @@
 000002E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000002F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000300 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000310 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
+00000310 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000320 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000330 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000340 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
 ----------------------------------------------------------
 00000400 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000410 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

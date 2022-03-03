@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.35\pic\dat\en_msgs.txt -cs \
   -h+dist/default/production\Lab_6_Temporizador.X.production.sym \
   --cmf=dist/default/production\Lab_6_Temporizador.X.production.cmf -z \
-  -Q16F887 -oC:\Users\javyp\AppData\Local\Temp\xcAsfn0.4 \
+  -Q16F887 -oC:\Users\javyp\AppData\Local\Temp\xcAs344.4 \
   -ver=XC8 PIC(R) Assembler \
   -Mdist/default/production/Lab_6_Temporizador.X.production.map -E1 \
   --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -29,7 +29,7 @@ build/default/production/main_COMP.o
                 config                             2007     2007        2        0       4
                 resVect                               0        0       12        0       0
                 code                                  0        0      214        0       0
-                udata_bank0                          20       20        8       20       1
+                udata_bank0                          20       20        9       20       1
                 udata_shr                            70       70        2       70       1
 
 TOTAL           Name                               Link     Load   Length     Space
@@ -49,7 +49,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 udata_shr                            70       70        2         1
 
         CLASS   BANK0          
-                udata_bank0                          20       20        8         1
+                udata_bank0                          20       20        9         1
 
         CLASS   BANK1          
 
@@ -80,14 +80,14 @@ TOTAL           Name                               Link     Load   Length     Sp
 
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
-                udata_bank0                    000020  000008  000028        20       1  BANK0       1
+                udata_bank0                    000020  000009  000029        20       1  BANK0       1
                 udata_shr                      000070  000002  000072        70       1  COMMON      1
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            0028-006F             48           1
+        BANK0            0029-006F             47           1
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
@@ -97,7 +97,7 @@ UNUSED ADDRESS RANGES
         EEDATA           2100-21FF            100           2
         ENTRY            0214-1FFF            100           2
         IDLOC            2000-2003              4           2
-        RAM              0028-006F             48           1
+        RAM              0029-006F             47           1
                          00A0-00EF             50
                          0110-016F             60
                          0190-01EF             60
